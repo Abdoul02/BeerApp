@@ -41,9 +41,7 @@ class MainFragment : Fragment() {
             recycle_view.setHasFixedSize(true)
             beerListAdapter = BeerListAdapter()
             recycle_view.adapter = beerListAdapter
-            Log.d("BeerName: ", "Hello")
             viewModel.observableBeers.observe(viewLifecycleOwner, Observer { beerResponse ->
-                Log.d("BeerName: ", "Name ${beerResponse[0].name}")
                 renderView(beerResponse)
 
             })

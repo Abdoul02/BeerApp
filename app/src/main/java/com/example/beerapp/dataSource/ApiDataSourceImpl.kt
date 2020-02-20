@@ -25,7 +25,6 @@ class ApiDataSourceImpl : ApiDataSource {
                 call: Call<List<BeerResponse>>,
                 response: Response<List<BeerResponse>>
             ) {
-                Log.d("MyFeedback", "${response.isSuccessful}")
                 _downloadedBeer.postValue(response.body())
             }
 
